@@ -26,17 +26,23 @@ app.get('', (req, res) => {
     })
 })
 
+
 app.get('/help', (req, res) => {
-    res.send([{
-        name: 'Andrew'
-    }, {
-        name: 'Sarah'
-    }])
+    res.render('help', {
+        helpText: 'This is some helpful text.',
+        title: 'Help',
+        name: 'Abdelrahman Khattab'
+    })
 })
 
+
 app.get('/about', (req, res) => {
-    res.send('<h1>About</h1>')
+    res.render('about', {
+        title: 'About Me',
+        name: 'Abdelrahman Khattab'
+    })
 })
+
 app.get('/weather', (req, res) => {
     if (!req.query.address) {
         return res.send({
