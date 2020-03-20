@@ -2,7 +2,7 @@ console.log('Client side javascript file is loaded!')
 
 const loc =document.querySelector('form')
 const search= document.querySelector('input')
-const msg1= document.querySelector('#msg 1')
+const msg1= document.querySelector('#msg1')
 const msg2= document.querySelector('#msg2')
 
 msg1.textContent='Loading...'
